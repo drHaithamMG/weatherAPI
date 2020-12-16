@@ -1,0 +1,63 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f6f6f6;
+}
+/*Current weather widget*/
+.widget-warpper {
+  margin: 100px auto;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.current-temp-warpper {
+  background: linear-gradient(90deg, #fbfbfb, #faf4ea);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 30px 60px;
+  margin-top: 30px;
+}
+.temp-warpper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.temp {
+  font-size: 150px;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+}
+.country {
+  content: "Amman, Jordan";
+  color: #c2c4ca;
+  font-size: 30px;
+  padding: 0;
+  text-align: center;
+
+}
+
+.weather-img {
+  border: 1px solid gold;
+}
+/*end current widget*/
+.templete-widget-warpper{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px 60px;
+    margin-top: 30px; 
+    flex-flow: row;
+  }
+.data-warpper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 15px;
+    
+}
