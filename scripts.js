@@ -30,8 +30,8 @@ function buildApp(data) {
     //debug
     console.log(data);
     //end debug
-    const days=new Map();
-    let day=[];
+    const days = new Map();
+    let day = [];
     //Building first weather widget
     buildCurrentWidget(warpper, city, country, currentTemp, currentIcon, currentWeatherDescription);
     //Parsing data for next days widget
@@ -40,24 +40,22 @@ function buildApp(data) {
         if (data.list[i].dt_txt.includes(currentDate)) {
             day.push(data.list[i]);
             if (i < data.list.length - 1 && !(data.list[i + 1].dt_txt || '').includes(currentDate)) {
-                days.set(currentDate,day);
-                day=[];
+                days.set(currentDate, day);
+                day = [];
                 currentDate = data.list[i + 1].dt_txt.split(' ')[0];
             }
-            days.set(currentDate,day);
+            days.set(currentDate, day);
         }
     }
     //Building widget for next days
-    for(let day of days.values() ){
-        let html=`<div class="templete-widget-warpper">`;
-        for(let hour of day){
-            let time=Number.parseInt(hour.dt_txt.split(' ')[1])-12;
+    for (let day of days.values()) {
+        let html = `<div class="templete-widget-warpper">`;
+        for (let hour of day) {
+            let time = Number.parseInt(hour.dt_txt.split(' ')[1]) - 12;
             let amOrPm;
-            if(time>0)
-            {amOrPm='pm';}
-            else 
-            {amOrPm='am';time+=12;}
-            html+=`<div class="data-warpper">
+            if (time > 0) { amOrPm = 'pm'; }
+            else { amOrPm = 'am'; time += 12; }
+            html += `<div class="data-warpper">
             <span class="tempreture">${Math.floor(hour.main.temp)}&deg</span>
             <img
               src="http://openweathermap.org/img/wn/${hour.weather[0].icon}@2x.png"
@@ -68,8 +66,8 @@ function buildApp(data) {
             <span class="am-pm">${amOrPm}</span>
           </div>`
         }
-        html+=` </div>`;
-        warpper.innerHTML+=html;
+        html += ` </div>`;
+        warpper.innerHTML += html;
     }
 }
 /**
@@ -115,7 +113,7 @@ function buildCurrentWidget(warpper, city, country, currentTemp, currentIcon, cu
     const tempWarpperId = document.querySelector('.temp-warpper');
     //Add temp and city
     tempWarpperId.appendChild(temp);
-    temp.innerHTML+=`&deg`
+    temp.innerHTML += `&deg`
     tempWarpperId.appendChild(cityCountry);
     //Add image
     currentTempWarpperId.appendChild(weatherImgDiv);
