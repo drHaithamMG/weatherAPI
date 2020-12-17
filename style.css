@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #f6f6f6;
+  color: #323a50;
 }
 /*Current weather widget*/
 .widget-warpper {
@@ -11,14 +12,12 @@ body {
   flex-direction: column;
 }
 .current-temp-warpper {
-  background: linear-gradient(90deg, #fbfbfb, #faf4ea);
+  background: linear-gradient(90deg, #fbfbfb, #bd801e);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 50px;
+  border-radius: 30px;
   display: flex;
   justify-content: space-between;
-  text-align: center;
   padding: 30px 60px;
-  margin-top: 30px;
 }
 .temp-warpper {
   display: flex;
@@ -29,35 +28,53 @@ body {
   font-size: 150px;
   font-weight: bold;
   padding: 0;
-  text-align: center;
 }
 .country {
   content: "Amman, Jordan";
-  color: #c2c4ca;
   font-size: 30px;
   padding: 0;
-  text-align: center;
-
 }
 
 .weather-img {
-  border: 1px solid gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.weather-img img {
+  width: 200px;
 }
 /*end current widget*/
-.templete-widget-warpper{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 30px 60px;
-    margin-top: 30px; 
-    flex-flow: row;
-  }
-.data-warpper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 15px;
-    
+.templete-widget-warpper {
+  background: linear-gradient(180deg, #fbfbfb, #bd801e);
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 60px;
+  margin-top: 30px;
+  overflow-x: scroll;
+}
+.templete-widget-warpper::-webkit-scrollbar {
+  display: none;
+}
+.data-warpper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+.tempreture {
+  font-size: 18px;
+  font-weight: bold;
+}
+.time {
+  font-size: 20px;
+  font-weight: bold;
+}
+.am-pm {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d2d4d8;
 }
