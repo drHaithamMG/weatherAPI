@@ -12,12 +12,11 @@ body {
   flex-direction: column;
 }
 .current-temp-warpper {
-  background: linear-gradient(90deg, #fbfbfb, gray);
+  background: linear-gradient(90deg, #fbfbfb, #bd801e);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 30px;
   display: flex;
   justify-content: space-between;
-  text-align: center;
   padding: 30px 60px;
 }
 .temp-warpper {
@@ -29,14 +28,11 @@ body {
   font-size: 150px;
   font-weight: bold;
   padding: 0;
-  text-align: left;
 }
 .country {
   content: "Amman, Jordan";
-  color: #c2c4ca;
   font-size: 30px;
   padding: 0;
-  text-align: center;
 }
 
 .weather-img {
@@ -49,6 +45,8 @@ body {
 }
 /*end current widget*/
 .templete-widget-warpper {
+  background: linear-gradient(180deg, #fbfbfb, #bd801e);
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 30px;
   display: flex;
