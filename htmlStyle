@@ -1,0 +1,26 @@
+ <div class="current-temp-warpper">
+        <div class="temp-warpper">
+          <span class="temp">23</span>
+          <span class="country">Amman, Jordan</span>
+        </div>
+        <div class="weather-img">
+          <img
+            src="http://openweathermap.org/img/wn/01d@2x.png"
+            alt=""
+            class="w-img"
+          />
+        </div>
+      </div>
+
+      <div class="templete-widget-warpper">
+        <div class="data-warpper">
+          <span class="tempreture">21</span>
+          <img
+            src="http://openweathermap.org/img/wn/01d@2x.png"
+            alt=""
+            class="w-icon"
+          />
+          <span class="time">12:00</span>
+          <span class="am-pm">am</span>
+        </div>
+      </div>
