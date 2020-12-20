@@ -51,10 +51,24 @@ function buildApp(data) {
     for (let day of days.values()) {
         let html = `<div class="templete-widget-warpper">`;
         for (let hour of day) {
-            let time = Number.parseInt(hour.dt_txt.split(' ')[1]) - 12;
+            let time = Number.parseInt(hour.dt_txt.split(' ')[1]);
             let amOrPm;
-            if (time > 0) { amOrPm = 'pm'; }
-            else { amOrPm = 'am'; time += 12; }
+            if (time >= 12) {
+                amOrPm = 'pm';
+                time -= 12;
+                if (time == 0) {
+                    time = 12;
+                    amOrPm = 'pm';
+                }
+            }
+            else {
+                amOrPm = 'am';
+                if (time == 0) {
+                    time = 12;
+                    amOrPm = 'am'
+                }
+            }
+
             html += `<div class="data-warpper">
             <span class="tempreture">${Math.floor(hour.main.temp)}&deg</span>
             <img
